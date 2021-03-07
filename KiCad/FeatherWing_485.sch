@@ -195,20 +195,14 @@ Connection ~ 8550 1000
 $Comp
 L Connector:Screw_Terminal_01x03 J3
 U 1 1 5FD18D24
-P 4250 3950
-F 0 "J3" H 4168 3625 50  0000 C CNN
-F 1 "Screw_Terminal_01x03" H 4168 3716 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4250 3950 50  0001 C CNN
-F 3 "~" H 4250 3950 50  0001 C CNN
-	1    4250 3950
+P 3300 3950
+F 0 "J3" H 3218 3625 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 3218 3716 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical" H 3300 3950 50  0001 C CNN
+F 3 "~" H 3300 3950 50  0001 C CNN
+	1    3300 3950
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4450 3850 5200 3850
-Wire Wire Line
-	4450 4050 5000 4050
-Wire Wire Line
-	4450 3950 4900 3950
 Wire Wire Line
 	4900 3950 4900 4150
 Wire Wire Line
@@ -410,4 +404,98 @@ Wire Wire Line
 Connection ~ 8100 1500
 Wire Wire Line
 	8100 1500 8100 1000
+$Comp
+L Power_Protection:TVS0500DRV U2
+U 1 1 6010E6AF
+P 4450 3400
+F 0 "U2" H 3945 3354 50  0000 R CNN
+F 1 "TVS0500DRV" H 3945 3445 50  0000 R CNN
+F 2 "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm" H 4650 3050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tvs0500.pdf" H 4350 3400 50  0001 C CNN
+	1    4450 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L Power_Protection:TVS0500DRV U3
+U 1 1 6010F312
+P 4450 4500
+F 0 "U3" H 4579 4546 50  0000 L CNN
+F 1 "TVS0500DRV" H 4579 4455 50  0000 L CNN
+F 2 "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm" H 4650 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tvs0500.pdf" H 4350 4500 50  0001 C CNN
+	1    4450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4050 3750 4050
+Wire Wire Line
+	3500 3950 3650 3950
+Wire Wire Line
+	3500 3850 3550 3850
+Wire Wire Line
+	4450 3700 4450 3850
+Connection ~ 4450 3850
+Wire Wire Line
+	4450 3850 5200 3850
+Wire Wire Line
+	4450 4200 4450 3950
+Connection ~ 4450 3950
+Wire Wire Line
+	4450 3950 4900 3950
+$Comp
+L power:GND #PWR?
+U 1 1 601342A5
+P 4450 4800
+F 0 "#PWR?" H 4450 4550 50  0001 C CNN
+F 1 "GND" H 4455 4627 50  0000 C CNN
+F 2 "" H 4450 4800 50  0001 C CNN
+F 3 "" H 4450 4800 50  0001 C CNN
+	1    4450 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60134C57
+P 4700 3100
+F 0 "#PWR?" H 4700 2850 50  0001 C CNN
+F 1 "GND" H 4705 2927 50  0000 C CNN
+F 2 "" H 4700 3100 50  0001 C CNN
+F 3 "" H 4700 3100 50  0001 C CNN
+	1    4700 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3100 4450 3100
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 60139433
+P 3250 4350
+F 0 "J4" H 3222 4282 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 3222 4373 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3250 4350 50  0001 C CNN
+F 3 "~" H 3250 4350 50  0001 C CNN
+	1    3250 4350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4250 3550 4250
+Wire Wire Line
+	3550 4250 3550 3850
+Connection ~ 3550 3850
+Wire Wire Line
+	3550 3850 4450 3850
+Wire Wire Line
+	3450 4350 3650 4350
+Wire Wire Line
+	3650 4350 3650 3950
+Connection ~ 3650 3950
+Wire Wire Line
+	3650 3950 4450 3950
+Wire Wire Line
+	3450 4450 3750 4450
+Wire Wire Line
+	3750 4450 3750 4050
+Connection ~ 3750 4050
+Wire Wire Line
+	3750 4050 5000 4050
 $EndSCHEMATC
